@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta cahrset="UTF-8">
+        <meta  http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>자바스크립트 테스트용 페이지</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>자바스크립트 테스트용 페이지</h1>
+        <p id="demo">첫 테스트용 페이지임</p>
+        <script>
+            //변수 선언
+            let FirstV = "Hello JaVaScript";
+
+            //console print
+            console.log(FirstV);
+
+            //자바스크립트 if문 
+            if (FirstV.length > 10){
+                //페이지 알람
+                alert("메세지가 10글자 이상입니다.");
+            }else{
+                alert("메세지가 10글자 미만입니다.");
+            }
+            alert("Javascript 공부를 도와준 GPT에게 압도적 감사를.")
+            
+            //자바스크립트로 문장을 변경함, 원래문장은 첫 테스트용 페이지임 인데 값을 넣어줌으로서 바뀜
+            //변수를 넣어서 값을 변경하는데 사용
+            document.getElementById("demo").innerHTML = "자바스크립트로 변경된 내용임"
+        </script>
+    </body>
+</html>
