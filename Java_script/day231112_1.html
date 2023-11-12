@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta cahrset="UTF-8">
+        <meta  http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>day231112_1.html</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                background-color: aquamarine;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h2>자바 스크립트에서 값 얻고 출력하기</h2>
+
+        <input type="text" id="input" placeholder="Type somthing">
+        <button id="button">push data</button>  
+        <script>
+            alert("welcome to 231112_1.html");
+
+            // 변수사용
+            var Value = 42;
+            console.log(Value);
+
+            //객체속성 
+            var object = {key:'value'};
+            console.log(object.key)
+
+            //배열
+            var array = [10,20,30];
+            console.log(array[1]);
+
+            //함수 호출
+            function add(a,b){
+                return a+b;
+            }
+
+            var result = add(2,3);
+            console.log(result);
+
+            //이벤트 핸들러                  
+            document.getElementById('button').addEventListener('click',function(){  
+                //getElementById 함수에서 이벤트를 (addEventListener)가받아오면 함수가 작동함
+                //지금 작성된 함수는 버튼에서 클릭 이벤트를 받아오면 작동하는 함수임 
+
+                //function함수안에 event를 넣으면
+                //마우스 위치, 클릭한 요소 같은 유용한 정보를 제공함
+                //console.log('버튼 클릭 이벤트 내용 : ',event);를 하는경우에 좌표등이 함께 나옴
+                //딱히 정보가 필요없을경우 공란으로 비워둬도 무방함 
+                var inputValue = document.getElementById('input').value;
+
+                //getElementById('input').value 
+                //동일한 id를 가지고있는 html 문장에서 value만 추출해서 가지고옴
+            
+                console.log(inputValue);
+            });
+
+            
+        </script>
+    </body>
+</html>
