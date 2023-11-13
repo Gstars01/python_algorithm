@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta cahrset="UTF-8">
+        <meta  http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>자바 스크립트에서 함수 정의하기</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <p>자바스크립트에서 함수 정의하기 </p>
+        <script>
+            //기본적인 함수정의
+            function sayHello(){
+                console.log("Hello !");
+            };
+            //함수 표현식 
+            var saybye = function(){
+                console.log("bye");
+            };
+            //화살표   
+            const saygoodnight = () => {
+                console.log("good night!");
+            };
+            //매개변수를 받는 함수
+            function greet(name){
+                console.log("good" + name + "!");
+            }
+            //값을 돌려주는 함수
+            function return_greet(a,b){
+                return a+b;
+            }
+            //매개변수를 받고 값을 돌려주는 함수
+            function reciver_return(name,x,y){
+                greet(name);
+                return return_greet(x,y)
+            }
+
+            sayHello();
+            saybye();
+            saygoodnight;
+            greet("morning");
+            console.log(return_greet("time to"," work"));
+            console.log(reciver_return("morning","time to ","work"));
+
+        </script>
+    </body>
+</html>
