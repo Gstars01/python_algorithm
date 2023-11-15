@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta cahrset="UTF-8">
+        <meta  http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>function_test</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                background-color: aquamarine;
+                margin-top: 120px;
+            }
+            #textWhatUType{
+                background-color: aliceblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="contents">
+            <div id="query"><input type="text" id="inpuTxt" placeholder="type here" size="40"></div>
+            <div><button id ="button" >push txt <br>what u want</button></div>
+            <div><p id="textWhatUType"></p></div>
+        </div>
+
+
+        <script>
+            function recive_func(){
+                    document.getElementById('button').addEventListener('click',function(){
+                    var inputTxt = document.getElementById('inpuTxt').value;
+                    console.log(inputTxt);
+                    document.getElementById("textWhatUType").innerHTML = inputTxt;
+                })
+            };
+            recive_func();
+        </script>
+
+    </body>
+</html>
