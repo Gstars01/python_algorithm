@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta cahrset="UTF-8">
+        <meta  http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Callback</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+
+
+
+    <body>
+        <p>콜백 함수는 함수의 매개변수로 전달되어 나중에 호출되는 함수임, 비동기 작업이 끝나면 콜백이 호출됨</p>
+        <script>
+
+            //함수 정의 함 fetchData는(callback)이라는 매개변수를 받음 
+            function fetchData(callback){ //callback = function(result) ,line 33
+
+                setTimeout(function () {
+                    var data = 'Async data';
+                    //작업이 완료된후 콜백함수 호출
+                    callback(data); //callback(data) = function(result)
+                }, 1000);
+                console.log("비동기함수 테스트용");
+                //위문장 작동후 fetchData 가 작동함 
+            }
+            //fetchData 함수를 호출하면서 콜백 함수를 전달함 
+            fetchData(function (result){
+                console.log(result); // log == 'async data'
+            });
+            //fetchData =>  
+        </script>
+    </body>
+</html>
