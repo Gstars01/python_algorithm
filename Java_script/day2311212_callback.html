@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta cahrset="UTF-8">
+        <meta  http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>콜백함수 테스스트용</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function download(downloadEnd){
+                setTimeout(function(){
+                    var end_text = "download is over";
+                    downloadEnd(end_text);
+
+                },5000);
+                console.log("download start");
+                alert("다운로드 시작");
+
+            }
+
+            download(function(result){
+                console.log(result);
+                alert("다운로드가 끝났습니다");
+            });
+            //내일할거 게이지바 채워지는 콜백함수
+        </script>
+
+    </body>
+</html>
