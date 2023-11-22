@@ -31,18 +31,16 @@
                 },4000);
                 setTimeout(function(){
                     document.getElementById( 'charge' ).value = '100';
+                    alert("끝");
                 },5000);
-                
-            }
+                console.log("download start");
+                alert("다운로드 시작");
+            }//이부분 내일 수정할것 
             function download(downloadEnd){
                 setTimeout(function(){
                     var end_text = "download is over";
                     downloadEnd(end_text);
-
                 },5000);
-                console.log("download start");
-                alert("다운로드 시작");
-
             }
 
             download(function(result){
