@@ -14,8 +14,26 @@
         </style>
     </head>
     <body>
-        <progress value="0" max="100"></progress>
+        <progress value="0" max="100" id="charge"></progress>
         <script>
+            function charge20(){
+                setTimeout(function(){
+                    document.getElementById( 'charge' ).value = '20';
+                },1000);
+                setTimeout(function(){
+                    document.getElementById( 'charge' ).value = '40';
+                },2000);
+                setTimeout(function(){
+                    document.getElementById( 'charge' ).value = '60';
+                },3000);
+                setTimeout(function(){
+                    document.getElementById( 'charge' ).value = '80';
+                },4000);
+                setTimeout(function(){
+                    document.getElementById( 'charge' ).value = '100';
+                },5000);
+                
+            }
             function download(downloadEnd){
                 setTimeout(function(){
                     var end_text = "download is over";
@@ -31,8 +49,9 @@
                 console.log(result);
                 alert("다운로드가 끝났습니다");
             });
-            //내일할거 게이지바 채워지는 콜백함수
+            //내일할거 게이지 채워지는 문항 체크 
+            charge20();
         </script>
-
+        
     </body>
 </html>
