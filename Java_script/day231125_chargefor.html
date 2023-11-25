@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta cahrset="UTF-8">
+        <meta  http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <progress id="Fox" value="0" max="100"></progress>
+        <progress id="thisWay" value="0" max="100"></progress>
+        <script>
+            function charge(){
+                //wrong way
+                for(let i=0;i<100;i++){
+                    setTimeout(function(){
+                        document.getElementById("Fox").value = i;
+                       },1000);
+                    }
+                    
+                };
+                
+            charge();
+            let i = 0;
+            const maxIterations = 100;
+            const gaugeElement = document.getElementById("thisWay");
+
+            // setInterval을 사용하여 0.5초 간격으로 실행되는 함수 설정
+            const intervalId = setInterval(function () {
+                if (i <= maxIterations) {   // 게이지 업데이트
+                    gaugeElement.value = i;  // i를 증가시켜 다음 반복을 위해 준비
+                    i++;
+                } else { 
+                    clearInterval(intervalId);
+                }
+            }, 500); 
+        </script>
+    </body>
+</html>
