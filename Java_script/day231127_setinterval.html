@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta cahrset="UTF-8">
+        <meta  http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <progress id="live" value="0" max="100"></progress>
+        <script>
+            let i = 0;
+            let str = long;
+            const maxValue = 100;
+            setInterval(function(){
+                //for(let i=0;i<101;i++){
+                //    document.getElementById("live").value = i;
+                //    console.log(i);
+                //} 현상황에서 for문은 사용할수없음 for문은 현 함수내부에서만 사용되기 때문에 
+                //  for문을 사용하는경우  setinterval 함수를 사용할 필요가 없음
+                if(i< maxValue){
+                    document.getElementById("live").value = i++;
+                    alert(str);
+                }//내일 할거 문자열
+            },500);
+        </script>
+    </body>
+</html>
